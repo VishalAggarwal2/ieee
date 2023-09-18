@@ -30,7 +30,7 @@ const Login = () => {
     })
   }
   const onSumbit=async()=>{
-    const bool = await sendData("http://localhost:3000/user/login",formData);
+    const bool = await sendData("https://ieee-api.vercel.app/user/login",formData);
     // console.log(bool)
 if(bool.error){
   setError(bool.error);
