@@ -1,0 +1,63 @@
+.image{
+    background-image: url("./Background.jpg") ;
+    margin-top: "30rem";
+    background-repeat: no-repeat ;
+   height: 650px;
+    background-size: 100%;
+    /* margin-top: -100px; */
+}
+.over{
+    position: relative;
+    font-size: 84px;
+   color: whitesmoke;
+    margin-left: 300px;
+    z-index: 2;
+    margin-top: -350px;
+}
+.what{
+    margin-top: 300px;
+}
+.what h1{
+    font-size: 40px;
+    color: rgb(49, 142, 49);
+}
+.what p {
+    font-size: 23px;
+}
+.calculate h1{
+    font-size: 40px;
+    color: rgb(49, 142, 49);
+}
+.calculate p{
+    font-size: 23px;
+}
+@media screen and (max-width: 768px){
+   .what{
+      margin-top: 100px;
+      
+    }
+    .what h1{
+        font-size: 30px;
+       
+    }
+    .what p {
+        font-size: 20px;
+    }
+    .calculate h1{
+        font-size: 30px;
+        
+    }
+    .calculate p{
+        font-size: 20px;
+    }
+    .image{
+      margin-top: 0px;  
+      height: 400px;
+      background-size: 100%;
+    }
+    .over{
+        margin-top: -310px;
+        margin-left: 70px;
+        font-size: 23px;
+    }
+}

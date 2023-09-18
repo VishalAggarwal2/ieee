@@ -1,0 +1,59 @@
+.flexrow{
+    display: flex;
+    flex-direction: row;
+}
+*{
+    text-decoration: none;
+
+}
+.nav {
+background-color: black;
+padding: 15px;;
+align-items: center;
+justify-content: space-evenly;
+color: white;
+margin: auto;
+}
+.nav ul{
+    color: white;
+    align-items: center;
+justify-content: space-evenly;
+gap: 20px;
+
+}
+NavLink{
+    color: white;
+}
+li{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+
+}
+.active{
+    background-color: green;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 30rem;
+}
+.navlink{
+    color: white;
+}
+.Login{
+    width: 50%;
+    margin: auto;
+    margin-top: 5rem;
+}
+.show600{
+    display: none;
+}
+@media screen and (max-width: 610px){
+.sp{
+    display: none;
+}
+
+.show600{
+    display: block;
+}
+}
