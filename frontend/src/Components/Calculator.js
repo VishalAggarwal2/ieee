@@ -28,7 +28,7 @@ if(!formdata.electricity||!formdata.diesel||!formdata.petrol||!formdata.water||!
     const paper = parseFloat(formdata.paper);
     const cff = electricity * 0.0023 + diesel * 0.0063 + petrol * 0.0072 + water * 0.001 * 0.149 + gas * 0.18316 + paper*1.04;      
 formdata.carbonFactor=cff;
-const bool=await sendData("http://localhost:3000/activity/addactivity",formdata);
+const bool=await sendData("https://ieee-api.vercel.app/activity/addactivity",formdata);
 if(bool.error){
     seter(bool.error)
 }
