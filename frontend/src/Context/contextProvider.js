@@ -33,7 +33,7 @@ const MyContextProvider = ({ children }) => {
 
   }
   const getDailydatauser=async(obj)=>{
-    const getdailldataus = await  fetch("https://ieee-api.vercel.app/activity/dailyactivity", {
+    const getdailldataus = await  fetch("https://ieee-api-tawny.vercel.app/activity/dailyactivity", {
       method: "POST",
       headers: {
           "Content-Type": "application/json"
@@ -46,7 +46,7 @@ return jsdd
   }
 // for compare
 const getDailydatacompare=async(obj)=>{
-  const getdailldatac = await  fetch("https://ieee-api.vercel.app/activity/dailyactivity", {
+  const getdailldatac = await  fetch("https://ieee-api-tawny.vercel.app/activity/dailyactivity", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
@@ -63,7 +63,7 @@ return jsdd
 
   const[isLogin,setisLogin]=useState(false);
 const setGoal=async(obj)=>{
-  const getallgoal = await  fetch("https://ieee-api.vercel.app/activity/getgoal", {
+  const getallgoal = await  fetch("https://ieee-api-tawny.vercel.app/activity/getgoal", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
@@ -76,7 +76,7 @@ console.log(jsdd);
 }
 
 const addGoal=async(obj)=>{
-  const addgoal = await  fetch("https://ieee-api.vercel.app/activity/addgoal", {
+  const addgoal = await  fetch("https://ieee-api-tawny.vercel.app/activity/addgoal", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
