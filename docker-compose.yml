@@ -1,0 +1,38 @@
+version: "3.8"
+services:
+  web:
+    depends_on: 
+      - api
+    build: ./frontend
+    command: npm run dev
+    ports:
+      - 3000:3000
+    develop:
+      watch:
+        - path: ./frontend/package.json
+          action: rebuild
+        - path: ./frontend/package-lock.json
+          action: rebuild
+        - path: ./frontend
+          target: /app
+          action: sync
+  api: 
+    build: ./Backend  
+    ports: 
+      - 3001:3001
+    environment: 
+      PORT: 3001
+      URL: "mongodb+srv://vishalaggarwal270:1SuGfOfJUyooxSk0@cluster0.cisfist.mongodb.net/"
+    develop:
+
+      watch:
+        - path: ./Backend/package.json
+          action: rebuild
+        - path: ./Backend/package-lock.json
+          action: rebuild
+        - path: ./Backend
+          target: /app
+          action: sync
+
+
+
