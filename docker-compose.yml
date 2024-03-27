@@ -1,10 +1,11 @@
 version: "3.8"
+
 services:
   web:
     depends_on: 
       - api
     build: ./frontend
-    command: npm run dev
+    command: npm run dev 
     ports:
       - 3000:3000
     develop:
@@ -16,6 +17,7 @@ services:
         - path: ./frontend
           target: /app
           action: sync
+
   api: 
     build: ./Backend  
     ports: 
@@ -24,7 +26,6 @@ services:
       PORT: 3001
       URL: "mongodb+srv://vishalaggarwal270:1SuGfOfJUyooxSk0@cluster0.cisfist.mongodb.net/"
     develop:
-
       watch:
         - path: ./Backend/package.json
           action: rebuild
@@ -34,5 +35,15 @@ services:
           target: /app
           action: sync
 
+  prom-server:
+    image: prom/prometheus
+    ports:
+      - 9090:9090
+    volumes:
+      - ./Backend/controllers/Prometheus-config.yml:/etc/prometheus/prometheus.yml
 
-
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - 3100:3100
+ 

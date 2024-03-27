@@ -16,6 +16,9 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^7.5.1"
+    "mongoose": "^7.5.1",
+    "prom-client": "^15.1.1",
+    "winston": "^3.13.0",
+    "winston-loki": "^6.0.8"
   }
 }
